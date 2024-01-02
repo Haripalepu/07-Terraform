@@ -10,16 +10,16 @@ resource "aws_instance" "SampleInstance" {  #Sampleinstance is terraform name
 
 
 resource "aws_security_group" "SampleSG" {
-  name        = "var.sg-name"
-  description = "var.sg-description"
+  name        = var.sg-name
+  description = var.sg-description
   #vpc_id      = aws_vpc.main.id
                                   
   ingress {
     description      = "TLS from VPC"
-    from_port        = "var.from-port" 
+    from_port        = var.from-port
     to_port          = 0
     protocol         = "tcp"
-    cidr_blocks      = "var.cidr_range" 
+    cidr_blocks      = var.cidr_range
     #ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
   }
   egress {
