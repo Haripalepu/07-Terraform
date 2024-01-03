@@ -1,6 +1,6 @@
 resource "aws_instance" "SampleInstance" {  #Sampleinstance is terraform name
   ami           = "ami-03265a0778a880afb" #devops-practice ami
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.SampleSG.id]
 
   tags = {
