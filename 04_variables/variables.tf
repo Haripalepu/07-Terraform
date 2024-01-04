@@ -3,6 +3,7 @@
 # -var-file
 # terraform.tfvars 
 # Env variable
+# if not mentioned in anywhere the n terraform will promt to enter the varibale
 
 
 
@@ -13,7 +14,7 @@ variable "ami_id" {
 
 variable "instance_type" {
     type = string
-    #default = "t2.micro"
+    default = "t2.micro"
 
 }
 
