@@ -1,4 +1,5 @@
 #To print all infmation of the resource give the resourcename.terraforname
+
 # output "Printing_Instance_inforamtion" {
 #     value = aws_instance.SampleInstance
   

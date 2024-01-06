@@ -2,8 +2,8 @@ variable "instance_name" {
     type = map
     default = {
         MongoDB = "t3.small"
-        cart = "t2.micro"
-        web = "t2.micro"
+        Cart = "t2.micro"
+        Web = "t2.micro"
         Catalogue = "t2.micro"
         }  
 }
