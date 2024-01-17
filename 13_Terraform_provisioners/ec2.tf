@@ -6,7 +6,7 @@ resource "aws_instance" "Terraform_Ec2" {
   tags = {
     Name = "Provisioners" 
   }
-##################################Fix this getting error here
+##################################Fix this getting error here may be windows issue
   provisioner "local-exec" {
     command = "echo ${self.private_ip} > inventory" #Self is a key word represents resource name & Terrafrom name.
   }
