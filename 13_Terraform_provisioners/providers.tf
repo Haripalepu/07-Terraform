@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" { #To store statefile in S3. we need to add te below details
     bucket = "aws-devops-terrafrombucket"
-    key    = "provisioner"
+    key    = "provisioners_key"
     region = "us-east-1"
     dynamodb_table = "aws-devops-terrafrombucket"
   }

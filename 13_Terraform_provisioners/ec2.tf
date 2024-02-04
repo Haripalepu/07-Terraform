@@ -1,20 +1,20 @@
 
 resource "aws_instance" "Terraform_Ec2" {  
-  ami           = "ami-03265a0778a880afb" 
+  ami           = "ami-0f3c7d07486cad139" 
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.Terraform_SG.id]
   tags = {
     Name = "Provisioners" 
   }
-##################################Fix this getting error here may be windows issue
-  provisioner "local-exec" {
-    command = "echo ${self.private_ip} > inventory" #Self is a key word represents resource name & Terrafrom name.
-  }
 
-  provisioner "local-exec" { #The above command will print the private ip and stored in inventory file & handovers the ip to ansible.
-    command = "ansible-playbook -i inventory main.yaml" 
-    #on_failure = continue/fail  To continue even it fails. or use fail to stop.
-  }
+  # provisioner "local-exec" {
+  #   command = "echo ${self.private_ip} > inventory" #Self is a key word represents resource name & Terrafrom name.
+  # }
+
+  # provisioner "local-exec" { #The above command will print the private ip and stored in inventory file & handovers the ip to ansible.
+  #   command = "ansible-playbook -i inventory main.yaml" 
+  #   #on_failure = continue/fail  To continue even it fails. or use fail to stop.
+  # }
 
   #For remote-exec first we need to connect to the server.
   connection {
