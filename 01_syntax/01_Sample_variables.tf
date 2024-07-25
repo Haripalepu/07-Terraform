@@ -17,4 +17,4 @@ output "sample02" {
   
 }
 
-#Mixing a word and variable is called interpolation
+#Mixing a word and variable is called interpolation.
